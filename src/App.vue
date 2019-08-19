@@ -16,7 +16,7 @@
             <v-expansion-panel-content>
               <router-link to="/moduleOne">
                 <v-list-item @click>
-                  <!-- eslint-enable -->
+                  
                   <v-list-item-content>
                     <v-list-item-title>Module 1</v-list-item-title>
                   </v-list-item-content>
@@ -24,7 +24,7 @@
               </router-link>
               <router-link to="/moduleOne">
                 <v-list-item @click>
-                  <!-- eslint-enable -->
+                  
                   <v-list-item-content>
                     <v-list-item-title>Module 2</v-list-item-title>
                   </v-list-item-content>
@@ -32,7 +32,7 @@
               </router-link>
               <router-link to="/moduleOne">
                 <v-list-item @click>
-                  <!-- eslint-enable -->
+                  
                   <v-list-item-content>
                     <v-list-item-title>Module 3</v-list-item-title>
                   </v-list-item-content>
