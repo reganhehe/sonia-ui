@@ -1,7 +1,5 @@
 <template>
-  <!-- <div class="bottomBar bg-black"> -->
-    <div>
-
+  <div class="bottomBar bg-black">
     <GridLayout
       :layout.sync="layout"
       :col-num="30"
@@ -24,23 +22,8 @@
         @deleteModule="removeComponent($event)"
         @openMiniModule="openComponent($event)"
       >{{item.i}}</MiniModule>
-
-      <!-- <AbstractModule
-        v-for="item in layout"
-        :x="item.x"
-        :y="item.y"
-        :w="item.w"
-        :h="item.h"
-        :i="item.i"
-        :key="item.i"
-        @deleteModule="removeComponent($event)"
-        @miniModule="minimizeComponent($event)"
-      >{{item.i}}</AbstractModule> -->
-
     </GridLayout>
-
-    <v-btn type="button" class="killswitch" name="killswitch" @click="removeComponent(2)">KILL</v-btn>
-
+    <button type="button" class="killswitch" name="killswitch" @click="removeComponent(2)">KILL</button>
   </div>
 </template>
 
@@ -55,15 +38,15 @@ export default {
   props: [],
   created: function() {
     //alert(this.miniModuleId);
-  }, 
+  },
   mounted() {
-    this.$root.$on('minimize',  (id) => {
+    this.$root.$on("minimize", id => {
       this.addComponent(id);
-    })
+    });
   },
   components: {
     MiniModule,
-    GridLayout: VueGridLayout.GridLayout,
+    GridLayout: VueGridLayout.GridLayout
   },
   data() {
     return {
@@ -75,7 +58,7 @@ export default {
       miniModules.push({ x: 8, y: 0, w: 1, h: 3, i: id });
     },
     removeComponent: function(id) {
-      this.$root.$emit('deleteTemp',id);
+      this.$root.$emit("deleteTemp", id);
       for (var j = 0; j < miniModules.length; j++) {
         if (miniModules[j].i == id) {
           miniModules.splice(j, 1);
@@ -83,12 +66,11 @@ export default {
       }
     },
     openComponent: function(id) {
-      this.$root.$emit('openModule', id);
+      this.$root.$emit("openModule", id);
       this.removeComponent(id);
     }
   }
 };
-
 </script>
 
 
@@ -97,31 +79,9 @@ export default {
   width: 250px;
 }
 
-/* .bottomBar {
-  z-index: 90000;
-  position: fixed;
-  bottom: 0;
-  margin: 0;
-  padding: 0;
-  height: 50px;
-  width: 100%;
-} */
-
-
 .killswitch {
-  background-color: #ff0909; 
-  color: #111111;
-  text-align: center;
-  display: inline-block;
-
-  position: absolute;
-  bottom: 0;
-  right: 45px;
-  opacity: 1 !important;
-} 
-/* .killswitch {
   z-index: 100000;
-  background-color: #ff0909; 
+  background-color: #ff0909;
   border: none;
   color: #111111;
   padding: auto;
@@ -132,12 +92,12 @@ export default {
   font-weight: 900;
   position: absolute;
   bottom: 0;
-  right: 0;
+  right: 40px;
   transition-duration: 0.4s;
   opacity: 1 !important;
-}  */
+}
 
-/* .killswitch:hover {
+.killswitch:hover {
   background-color: #a32727;
   border: none;
   color: #111111;
@@ -151,5 +111,5 @@ export default {
   right: 0;
   transition-duration: 0.4s;
   height: 100%;
-}  */
+}
 </style>

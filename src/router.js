@@ -1,16 +1,11 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Home from './views/Home.vue';
+
 
 Vue.use(Router);
 
 export default new Router({
   routes: [
-    {
-      path: '/',
-      name: 'home',
-      component: Home,
-    },
     {
       path: '/telemetry',
       name: 'telemetry',
@@ -18,6 +13,16 @@ export default new Router({
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import(/* webpackChunkName: "telemetry" */ './views/Telemetry.vue'),
+    },
+    {
+      path: '/telemetryLayout',
+      name: 'telemetryLayout',
+      component: () => import('./views/TelemetryLayout.vue'),
+    },
+    {
+      path: '/moduleOne',
+      name: 'moduleOne',
+      component: () => import('./views/ModuleOne.vue'),
     },
   ],
 });
