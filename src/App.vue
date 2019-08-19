@@ -3,18 +3,18 @@
     <v-navigation-drawer v-model="drawer" app>
       <v-list dense>
         <!-- eslint-disable -->
-        <router-link to="/contact">
+        <router-link to="/">
           <v-list-item @click>
             <v-list-item-content>
-              <v-list-item-title>Modules</v-list-item-title>
+              <v-list-item-title>Home</v-list-item-title>
             </v-list-item-content>
           </v-list-item>
         </router-link>
-        <router-link to="/favorite">
+        <router-link to="/telemetry">
           <v-list-item @click>
             <!-- eslint-enable -->
             <v-list-item-content>
-              <v-list-item-title>Connection</v-list-item-title>
+              <v-list-item-title>Telemetry</v-list-item-title>
             </v-list-item-content>
           </v-list-item>
         </router-link>
@@ -42,9 +42,9 @@
       </v-container>
     </v-content>
 
-    <v-footer color="blue" app>
+    <!-- <v-footer color="blue" app>
       <span class="white--text">&copy; 2019</span>
-    </v-footer>
+    </v-footer> -->
   </v-app>
 </template>
 
@@ -58,3 +58,37 @@ export default {
   })
 };
 </script>
+
+<style>
+#app {
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+#nav {
+  padding: 30px;
+}
+
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+#nav a.router-link-exact-active {
+  color: #42b983;
+}
+
+.bg-black {
+  background-color: #111111;
+}
+
+body {
+  margin: 0;
+}
+
+.size-md {
+  width: 100px;
+}
+</style>
