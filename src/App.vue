@@ -52,16 +52,19 @@
         </router-link>
       </v-list>
     </v-navigation-drawer>
+    
 
-    <v-app-bar app color="blue" dark>
+    <!-- <v-app-bar app color="blue" dark>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
 
       <v-toolbar-title class="headline text-uppercase">
         <span>Sonia</span>
       </v-toolbar-title>
-    </v-app-bar>
+    </v-app-bar> -->
 
     <v-content>
+
+      <v-btn text color="primary" @click.stop="drawer = !drawer">Sonia</v-btn>
       <v-container class="fill-height" fluid>
         <v-row align="center" justify="center">
           <v-col class="text-center">
