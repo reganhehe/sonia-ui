@@ -16,7 +16,6 @@
             <v-expansion-panel-content>
               <router-link to="/moduleOne">
                 <v-list-item @click>
-                  
                   <v-list-item-content>
                     <v-list-item-title>Module 1</v-list-item-title>
                   </v-list-item-content>
@@ -24,7 +23,6 @@
               </router-link>
               <router-link to="/moduleOne">
                 <v-list-item @click>
-                  
                   <v-list-item-content>
                     <v-list-item-title>Module 2</v-list-item-title>
                   </v-list-item-content>
@@ -32,7 +30,6 @@
               </router-link>
               <router-link to="/moduleOne">
                 <v-list-item @click>
-                  
                   <v-list-item-content>
                     <v-list-item-title>Module 3</v-list-item-title>
                   </v-list-item-content>
@@ -52,7 +49,6 @@
         </router-link>
       </v-list>
     </v-navigation-drawer>
-    
 
     <!-- <v-app-bar app color="blue" dark>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
@@ -60,11 +56,14 @@
       <v-toolbar-title class="headline text-uppercase">
         <span>Sonia</span>
       </v-toolbar-title>
-    </v-app-bar> -->
+    </v-app-bar>-->
 
     <v-content>
-
-      <v-btn text color="primary" @click.stop="drawer = !drawer">Sonia</v-btn>
+      <v-btn text color="primary" @click.stop="drawer = !drawer">
+        <v-avatar>
+          <img src="./assets/logo_color.png" alt="logo-sonia" />
+        </v-avatar>
+      </v-btn>
       <v-container class="fill-height" fluid>
         <v-row align="center" justify="center">
           <v-col class="text-center">
@@ -73,7 +72,6 @@
         </v-row>
       </v-container>
     </v-content>
-
   </v-app>
 </template>
 
