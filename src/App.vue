@@ -50,21 +50,13 @@
       </v-list>
     </v-navigation-drawer>
 
-    <!-- <v-app-bar app color="blue" dark>
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-
-      <v-toolbar-title class="headline text-uppercase">
-        <span>Sonia</span>
-      </v-toolbar-title>
-    </v-app-bar>-->
-
     <v-content>
-      <v-btn text color="primary" @click.stop="drawer = !drawer">
-        <v-avatar>
-          <img src="./assets/logo_color.png" alt="logo-sonia" />
-        </v-avatar>
+      <v-btn text x-large color="primary" @click.stop="drawer = !drawer">
+        
+          <img src="./assets/logo_color.png" alt="logo-sonia" width="120px" height="auto" />
+        
       </v-btn>
-      <v-container class="fill-height" fluid>
+      <v-container fluid>
         <v-row align="center" justify="center">
           <v-col class="text-center">
             <router-view></router-view>
