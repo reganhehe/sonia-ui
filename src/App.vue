@@ -35,6 +35,7 @@
                   </v-list-item-content>
                 </v-list-item>
               </router-link>
+              
             </v-expansion-panel-content>
           </v-expansion-panel>
         </v-expansion-panels>
@@ -47,6 +48,13 @@
             </v-list-item-content>
           </v-list-item>
         </router-link>
+        <router-link to="/connection">
+                <v-list-item @click>
+                  <v-list-item-content>
+                    <v-list-item-title>Connection</v-list-item-title>
+                  </v-list-item-content>
+                </v-list-item>
+              </router-link>
       </v-list>
     </v-navigation-drawer>
 

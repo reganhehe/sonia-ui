@@ -24,5 +24,10 @@ export default new Router({
       name: 'moduleOne',
       component: () => import('./views/ModuleOne.vue'),
     },
+    {
+      path: '/connection',
+      name: 'connection',
+      component: () => import('./views/Connection.vue'),
+    },
   ],
 });
